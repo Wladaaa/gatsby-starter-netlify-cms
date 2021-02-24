@@ -35,8 +35,7 @@ module.exports = {
         fieldName: "umbraco",
         url: "https://graphql.umbraco.io/",
         headers: {
-          //'Api-Key': `${process.env.API_KEY}`,
-          'Api-Key':'sd4kV5Uo5ipNfcqYpHWR',
+          'Api-Key': `${process.env.API_KEY}`,
           'umb-project-alias': 'uladzislavas-self-confident-bunny',
           'Content-Type': 'application/json',
         },
