@@ -101,3 +101,18 @@ export const pageQuery = graphql`
     }
   }
 `
+
+
+
+/*export const pageQueryTest = graphql`
+  query{
+    umbraco{
+      allContent{
+        items{
+          name
+        }
+      }
+    }
+  }
+`*/
+//curl 'https://graphql.umbraco.io' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: https://uladzislavas-self-confident-bunny.s1.umbraco.io' -H 'umb-project-alias: uladzislavas-self-confident-bunny' --data-binary '{"query":"# Write your query or mutation here\nquery {\n  content {\n    name\n  }\n}\n","variables":{"name1":"Hello"}}' --compressed
