@@ -5,29 +5,6 @@ module.exports = {
       'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
   },
   plugins: [
-    /*{
-      resolve: "gatsby-source-graphql",
-      options: {
-        // This type will contain remote schema Query type
-        typeName: "umbraco",
-        // This is the field under which it's accessible
-        fieldName: "umbraco",
-        // URL to query from
-        //url: "https://api.graphcms.com/simple/v1/swapi",
-        //url: "https://graphql.umbraco.io/?Umb-Project-Alias=uladzislavas-self-confident-bunny",
-        url: "https://api.umbraco.io/?umb-project-alias=uladzislavas-self-confident-bunny",
-        headers: {
-          Authorization: `Basic sd4kV5Uo5ipNfcqYpHWR`,
-        },
-        
-        /*url: "https://graphql.umbraco.io",
-        headers: {
-          Authorization: `Basic sd4kV5Uo5ipNfcqYpHWR`,
-          'umb-project-alias': 'uladzislavas-self-confident-bunny',
-          'Content-Type': 'application/json',
-        },
-      },
-    },*/
     {
       resolve: "gatsby-source-graphql",
       options: {
@@ -39,7 +16,7 @@ module.exports = {
           'umb-project-alias': 'uladzislavas-self-confident-bunny',
           'Content-Type': 'application/json',
         },
-        refetchInterval: 60,
+        refetchInterval: 20,
       },
     },
     'gatsby-plugin-react-helmet',

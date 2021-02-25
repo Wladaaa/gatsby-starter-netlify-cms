@@ -22,6 +22,20 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      umbraco{
+        allBlogPost{
+            edges{
+                node{
+                    createDate
+                    mainContent
+                    subTitle
+                    name
+                    id
+                    url
+                }
+            }
+        }
+    }
     }
   `).then((result) => {
     if (result.errors) {
@@ -40,6 +54,21 @@ exports.createPages = ({ actions, graphql }) => {
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
+        context: {
+          id,
+        },
+      })
+    })
+
+    const umbracoPosts = result.data.umbraco.allBlogPost.edges
+
+    umbracoPosts.forEach((edge) => {
+      const id = edge.node.id
+      createPage({
+        path: edge.node.url,
+        component: path.resolve(
+          `src/templates/blog-post-umbraco.js`
+        ),
         context: {
           id,
         },
